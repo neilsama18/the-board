@@ -189,6 +189,19 @@ export default function ExamPage() {
 
         {/* QUESTION CARD */}
         <div className="bg-white p-8 rounded-xl border shadow-sm">
+
+          {/* SITUATION — show only if present */}
+          {currentQuestion.situation && (
+            <div className="mb-4 p-4 bg-slate-50 border-l-4 border-slate-400 rounded-r-lg">
+              <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-1">
+                Situation
+              </p>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                {currentQuestion.situation}
+              </p>
+            </div>
+          )}
+
           <h2 className="text-lg font-semibold leading-relaxed mb-8">
             {currentIndex + 1}. {currentQuestion.question}
           </h2>
